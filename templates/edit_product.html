@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="col-md-5 offset-md-4-">
+    <div class="card card-body">
+        <form action="/update/{{producto.0}}" method="POST">
+            <div class="from-group">
+            <input type="text" name="nombre" value="{{ producto.1 }}" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="from-group">
+            <input type="text" name="cantidad"  value="{{ producto.2 }}" class="form-control" placeholder="Cantidad">
+            </div>
+            <div class="from-group">
+            <input type="text" name="medida" value="{{ producto.3 }}" class="form-control" placeholder="Medida (g/ml)">
+            </div>
+            <div class="from-group">
+            <input type="text" name="precio" value="{{ producto.4 }}" class="form-control" placeholder="Precio ($)">
+            </div>
+            <div class="from-group">
+            <input type="text" name="fechaDeVencimiento" value="{{ producto.5 }}" class="form-control" placeholder="Vencimiento (dd.mm.aa)">
+            </div>
+            <div class="from-group">
+            <button type="submit" class="btn btn-primary btn-block">
+                Editar
+            </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
